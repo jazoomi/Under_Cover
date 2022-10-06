@@ -23,12 +23,18 @@ Erin Goulais
 Harsimr Dhillon 
 
      hdillon2@my.yorku.ca
-Section B
-Lab 02
+     
+     Section B
+
+     Lab 02
+
 Rohit Dhall
-Rohit059@my.yorku.ca
-Section B
-Lab 04
+
+    Rohit059@my.yorku.ca
+
+    Section B
+
+    Lab 04
  
 
 Name of Team:
