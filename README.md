@@ -7,11 +7,11 @@ Team members:
  
 Sadiq Azmi
 
- jazoomi@my.yorku.ca
+     jazoomi@my.yorku.ca
 
- Section B
+     Section B
 
- Lab 01
+     Lab 01
 Erin Goulais
 egoulais@my.yorku.ca (or redturtlewoman@icloud.com)
 Section B
