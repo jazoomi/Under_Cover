@@ -13,11 +13,16 @@ Sadiq Azmi
 
      Lab 01
 Erin Goulais
-egoulais@my.yorku.ca (or redturtlewoman@icloud.com)
-Section B
-Lab 01 
+
+     egoulais@my.yorku.ca (or redturtlewoman@icloud.com)
+
+     Section B
+
+     Lab 01 
+
 Harsimr Dhillon 
-hdillon2@my.yorku.ca
+
+     hdillon2@my.yorku.ca
 Section B
 Lab 02
 Rohit Dhall
