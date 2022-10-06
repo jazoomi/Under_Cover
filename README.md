@@ -53,22 +53,24 @@ Matching game is a fun interactive game which uses the coding languages: HTML, C
 
 <h4> Software Requirments </h4>
 
-1. 
+1. User can select multipule pages layout
 
-2.
+2. user can change theme of the page with buttons on the side
 
-3.
+3. user can change the difficulty of the game 
 
-4.
+4. User should be able to click a start button for the game
 
-5.
+5. User should be able to click on the shapes to match 
 
-6.
+6. If user were to incorrectlly click on a shape, the game would end once they click on the rest of the shapes. ( i.e if 4 shapes, game ends at the 4th shape
 
-7.
+7. user can reset the game with a reset button
 
-8.
+8. confirmation would be asked when user closes the game ( via X button)
 
-9.
+9. have a round counter displayed
 
-10.
+10. shows a small prompt of congratulation when they win a round
+
+11. shows a deafeat when the user loses
