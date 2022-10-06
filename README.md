@@ -6,9 +6,12 @@ Term Project: Phase 0
 Team members:
  
 Sadiq Azmi
-  jazoomi@my.yorku.ca
-  Section B
-  Lab 01
+
+ jazoomi@my.yorku.ca
+
+ Section B
+
+ Lab 01
 Erin Goulais
 egoulais@my.yorku.ca (or redturtlewoman@icloud.com)
 Section B
