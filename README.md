@@ -53,9 +53,9 @@ Matching game is a fun interactive game which uses the coding languages: HTML, C
 
 <h4> Software Requirments </h4>
 
-1. User can select multipule pages layout
+1. User can select multiple page layout
 
-2. user can change theme of the page with buttons on the side
+2. user can change the theme of the page with the buttons on the side
 
 3. user can change the difficulty of the game 
 
