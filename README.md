@@ -53,28 +53,29 @@ Matching game is a fun interactive game which uses the coding languages: HTML, C
 
 <h4> Software Requirments </h4>
 
-1. User can select multiple page layout
+1. First, the user will be asked to enter their name which is located on the game page 
 
-2. user can change the theme of the page with the buttons on the side
+2. Second, the user will submit by clicking the "submit" button (which is oval, blue, located next to the name)
 
-3. user can change the difficulty of the game 
+3. The game is set at default easy mode (or can change it to hard mode which needs to be done before starting) 
 
-4. User should be able to click a start button for the game
+4. All buttons in the webpages are rectangle and grey colour.
 
-5. User should be able to click on the shapes to match 
+5. User should be able to click a "start" button for the game (the start button is circular and red)
 
-6. If user were to incorrectlly click on a shape, the game would end once they click on the rest of the shapes. ( i.e if 4 shapes, game ends at the 4th shape
+6. user can change the theme of the page with the three buttons on the side (the three buttons are grey circle) the themes consits of 1) forest, 2) beach 3) desert
 
-7. user can reset the game with a reset button
+7. when the game starts the images will light up for a sequence where the user then has to match it
 
-8. confirmation would be asked when user closes the game ( via X button)
+5. User should be able to click on the shapes, circle, pentagon, triangle, rectangle.
 
-9. have a round counter displayed
+6. If user were to incorrectlly click on a shape, the game would end once they click on the incorrect shape\
+
+7. when the user clicks on a shape at any time the shape will change color to red
+
+8. user can enter their name to add their score will be displayed on the leaderbored 
 
 10. shows a small prompt of congratulation when they win a round
 
-11. shows a deafeat when the user loses
-
-12. *** extra features: 1. user enters the system and is asked to login using their name and/password.
-
+11. shows a deafeat when the user loses " You lose!"
 
