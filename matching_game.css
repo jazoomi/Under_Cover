@@ -75,7 +75,86 @@ h1{
     height: 300px;
     float: right;
 }
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
 
+#MatchingGame{
+    font-size: 50px;
+    margin: 50px;
+    padding: 10px;
+    border-style: solid;
+    width: 500px;
+    text-align: center;
+    
+    grid-column: 2 / 3;
+}
+
+.leaderboard{
+    font-size: 25px;
+    margin: 50px;
+    width: 300px;
+    border-style: solid;
+    padding: 10px;
+    grid-column: 3 / 4;
+}
+
+.shapes{
+    grid-column: 2 / 3 ;
+    display: grid;
+    grid-template-columns: auto auto ;
+    position: relative;
+    gap: 50px;
+
+}
+
+.square {
+    height: 100px;
+    width: 100px;
+    background-color: #555;
+    
+  }
+  .circle {
+    height: 100px;
+    width: 100px;
+    background-color: #555;
+    border-radius: 50%;
+    
+
+  }
+
+  .rectangle {
+    height: 100px;
+    width: 200px;
+    background-color: #555;
+    
+
+  }
+  .triangle {
+	width: 0;
+	height: 0;
+	border-left: 50px solid transparent;
+	border-right: 50px solid transparent;
+	border-bottom: 100px solid #555;
+
+}
+
+
+#start-game{
+
+    grid-column: 2 / 3;
+    position: relative;
+    margin: 50px;
+    width: 100px;
+    height: 50px;
+}
+
+#lose{
+    margin: 50px;
+    font-size: 20px;
+    grid-column: 3 / 4;
+}
 
 /* Footer */
 .footer{
