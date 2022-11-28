@@ -75,7 +75,7 @@ Matching game is a fun interactive game which uses the coding languages: HTML, C
 
 8. user can enter their name to add their score will be displayed on the leaderbored 
 
-10. shows a small prompt of congratulation when they win a round
+10. shows a small prompt of congratulation when they win a round.
 
-11. shows a deafeat when the user loses " You lose!"
+11. shows a deafeat when the user loses " You lose!"  
 
