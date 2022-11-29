@@ -24,7 +24,7 @@ body {
     border-style: solid;
     padding: 28px 0;
 }
-h1{
+#title{
     float: left;
     text-align: center;
 
@@ -47,7 +47,7 @@ h1{
 }
 
 
-/* main body content */
+/* main home body content */
 #GameDescription{
     font-size: 20px;
     margin: 50px;
@@ -75,6 +75,8 @@ h1{
     height: 300px;
     float: right;
 }
+
+/* Game page css */
 .container{
     display: grid;
     grid-template-columns: auto auto auto;
