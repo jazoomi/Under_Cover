@@ -46,6 +46,9 @@ body {
     font-size: x-large
 }
 
+/* instructions page css here */
+
+
 
 /* main home body content */
 #GameDescription{
@@ -157,6 +160,8 @@ body {
     font-size: 20px;
     grid-column: 3 / 4;
 }
+
+/* About us css page here */
 
 /* Footer */
 .footer{
