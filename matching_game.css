@@ -15,7 +15,7 @@
     position: relative;
 }
 body {
-    background-color: pink;
+    background-color: rgb(168, 239, 209);
     align-items: center;
     justify-content: space-between;
 }
