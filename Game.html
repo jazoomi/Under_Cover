@@ -14,9 +14,9 @@
                 <li> <h2><a href="Instructions.html"> Instructions </a></h2> </li>
                 <li> <h2><a href="Game.html"> Game</a></h2> </li>
                 <li> <h2><a href="AboutUs.html"> About Us </a></h2> </li>
-                <button onclick=""> Theme 1 </button>
-                <button onclick=""> Theme 2 </button>
-                <button onclick=""> Theme 3 </button>
+                <button onclick="Theme1()"> Theme 1 </button>
+                <button onclick="Theme2()"> Theme 2 </button>
+                <button onclick="Theme3()"> Theme 3 </button>
             </ul>
         </nav>
     </div>
@@ -31,13 +31,13 @@
         </div>
 
         <div class="shapes">
-            <div class="rectangle"></div>
-            <div class="circle"></div>
-            <div class="square"></div>
-            <div class="triangle"></div>
+            <div id="rectangle" onclick="rectangle(1)"></div>
+            <div id="circle" onclick="circle(2)"></div>
+            <div id="square" onclick="square(3)"></div>
+            <div id="triangle" onclick="triangle(4)"></div>
         </div>
 
-        <button id="start-game"> Start </button>
+        <button id="start-game" onclick="Game()"> Start </button>
         <h3 id="lose"> test game </h3>
      
 
