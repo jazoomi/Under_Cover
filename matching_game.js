@@ -80,7 +80,6 @@ function iteration(){
 function generateShape() {
     
     var shape = Math.floor(Math.random()*4 + 1);
-    var next = shapes.length;
     if ( shape == 1){
         shapes[amount] = shape;
         amount++;
