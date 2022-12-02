@@ -1,18 +1,33 @@
 var amount = 0; // this is the length of the shapes ( the round)
-var shapes = {}; //this is the shape order, 1 isrectangle, 2 is circle, 3 square, 4 triangle
+var shapes = []; //this is the shape order, 1 isrectangle, 2 is circle, 3 square, 4 triangle
 var shapeCheck = 0; // this will keep track what shape number to check when a shape is pressed in attempt to match
-var names = {}; //this is an array that stores the names
+//var names = {}; //this is an array that stores the names
 var players = 0; // this is the amount of people on the leaderboard
+var url = "http://localhost:3000/post";
+
+
 function Game(){
+
     amount = 0;
-    shapes = {};
+    shapes = [];
     shapeCheck = 0;
-    generateShape();
-    iteration();
-    names [players] = document.getElementById("fname").value;
+    // names [players] =document.getElementById("fname").value; 
+    playerName = document.getElementById("fname").value;
     document.getElementById("fname").disabled = true;
     document.getElementById("start-game").disabled = true;
+    
+    $.post(url+'?data='+JSON.stringify({
+        'name': playerName, //client's identity on the server
+        'action':'generateShape'}),
+        response);
+    
 
+    setTimeout(() => {
+        document.getElementById("rectangle").style.pointerEvents = "all";
+        document.getElementById("square").style.pointerEvents = "all";
+        document.getElementById("triangle").style.pointerEvents = "all";
+        document.getElementById("circle").style.pointerEvents = "all";
+    }, 3000);
 }
 
 //functions for shape buttons
@@ -45,10 +60,9 @@ function triangle(n4){
 }
 
 //interates through all the shapes up until now
-function iteration(){
+function iteration(shapes){
     var i = 0;
     myInterval = setInterval(function(){ 
-
         if ( shapes[i] == 1){
             document.getElementById("rectangle").style.backgroundColor = "red"
             setTimeout(function(){document.getElementById("rectangle").style.backgroundColor = "#555"}, 1000);
@@ -66,53 +80,63 @@ function iteration(){
             setTimeout(function(){document.getElementById("triangle").style.borderBottomColor = "#555"}, 1000);
         }
         i++;
-        document.getElementById("lose").innerHTML = i + " Round: " + amount;
+        document.getElementById("lose").innerHTML = i + " Round: " + shapes.length;
 
-        if (i >= amount){
+        if (i >= shapes.length){
             clearInterval(myInterval);
         }
     }, 2000);
 
-    
     
 }
 //add a new shape only to the end of the array
 function generateShape() {
     
     var shape = Math.floor(Math.random()*4 + 1);
-    if ( shape == 1){
-        shapes[amount] = shape;
-        amount++;
-    }
-    else if ( shape == 2){
-        shapes[amount] = shape;
-        amount++;
-    }
-    else if (shape == 3){
-        shapes[amount] = shape;
-        amount++;
-    }
-    else {
-        shapes[amount] = shape;
-        amount++;
-    }
+
+    shapes.push(shape);
+
 }
 //checks if selected chape is correct
 function checkShape(n){
-    if (shapes[shapeCheck] == n){
+    if (response.shapes[shapeCheck] == n){
         shapeCheck++;
-        if(shapeCheck == amount){
+        if(shapeCheck == response.shapes.length){
+            document.getElementById("rectangle").style.pointerEvents = "none";
+            document.getElementById("square").style.pointerEvents = "none";
+            document.getElementById("triangle").style.pointerEvents = "none";
+            document.getElementById("circle").style.pointerEvents = "none";
             shapeCheck = 0;
-            generateShape();
+            
+            
             iteration()
+            setTimeout(() => {
+                document.getElementById("rectangle").style.pointerEvents = "all";
+            document.getElementById("square").style.pointerEvents = "all";
+            document.getElementById("triangle").style.pointerEvents = "all";
+            document.getElementById("circle").style.pointerEvents = "all";
+            }, shapes.length *3000);
         }
     }
     else{
+        document.getElementById("rectangle").style.pointerEvents = "none";
+        document.getElementById("square").style.pointerEvents = "none";
+        document.getElementById("triangle").style.pointerEvents = "none";
+        document.getElementById("circle").style.pointerEvents = "none";
         document.getElementById("lose").innerHTML = "Game over! you lose!";
         shapeCheck = -1;
         document.getElementById("start-game").disabled = false; //turn the button back on
         document.getElementById("fname").disabled = false; //turn the textbox back on
-        document.getElementById("scores").innerHTML +=  names[players] + " " + amount;
+        document.getElementById("scores").innerHTML +=   " " + shapes.length;
         players++;
+    }
+}
+function response(data, status){
+
+    var response = JSON.parse(data);
+    console.log(response.shapes);
+    iteration(response.shapes);
+    if (response['action'] == 'generateShape'){
+
     }
 }
