@@ -1,5 +1,48 @@
 var amount = 0; // this is the length of the shapes ( the round)
-var shapes = {}; //this is the shape order, 1 isrectangle, 2 is circle, 3 square, 4 triangle
+var shapes = []; //this is the shape order, 1 isrectangle, 2 is circle, 3 square, 4 triangle
+var express = require('express');
+var app = express();
+
+var name; 
+
+
+app.post('/post', (req, res) => {
+    res.header("Access-Control-Allow-Origin", "*");
+
+    var z = JSON.parse(req.query['data']);
+
+    if (z['action'] == 'generateShape') {
+        generateShape();
+
+
+
+
+
+
+        var jsontext = JSON.stringify({
+            'shapes' : shapes
+
+        });
+
+        
+        res.send(jsontext);
+
+    }
+    else if ( z['action'] == 'evaluate'){
+
+        var jsontext = JSON.stringify({
+
+
+        });
+
+        res.send(jsontext);
+
+    }
+    else if ( z['action'] == 'leaderBoard'){
+
+    }
+}).listen(3000);
+
 
 
 
@@ -7,20 +50,6 @@ var shapes = {}; //this is the shape order, 1 isrectangle, 2 is circle, 3 square
 function generateShape() {
     
     var shape = Math.floor(Math.random()*4 + 1);
-    if ( shape == 1){
-        shapes[amount] = shape;
-        amount++;
-    }
-    else if ( shape == 2){
-        shapes[amount] = shape;
-        amount++;
-    }
-    else if (shape == 3){
-        shapes[amount] = shape;
-        amount++;
-    }
-    else {
-        shapes[amount] = shape;
-        amount++;
-    }
+    
+    shapes[shapes.length] = shape;
 }
