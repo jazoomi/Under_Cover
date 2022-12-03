@@ -1,0 +1,23 @@
+{
+  "name": "under_cover",
+  "version": "1.0.0",
+  "description": "Term Project: Phase 0",
+  "main": "matching_game.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jazoomi/Under_Cover.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jazoomi/Under_Cover/issues"
+  },
+  "homepage": "https://github.com/jazoomi/Under_Cover#readme",
+  "devDependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.1.0"
+  }
+}
