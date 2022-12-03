@@ -236,6 +236,13 @@ body {
     width: 1400px;
     margin-right: 50000px;
 }
+
+#motivations span {
+    font-style: italic;
+    font-family: cursive;
+    color: rgb(178, 237, 241);
+}
+	
 hr{
 
     overflow: visible;
