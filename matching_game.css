@@ -23,6 +23,7 @@ body {
 	border-style: solid; border-color: white; margin: 3px;
 	background-image: url('images/Title_BG.jpg');
 	font-family: cursive;
+	color: rgb(18, 89, 156);
 }
 
 #GameDescription span {
