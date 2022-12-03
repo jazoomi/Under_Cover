@@ -136,7 +136,7 @@ body {
     border-style: solid;
     padding: 10px;
     grid-column: 3 / 4;
-    background-image: url('images/Leaderboard.jpg');
+    background-image: url('images/Winner.jpg');
 }
 
 .shapes{
