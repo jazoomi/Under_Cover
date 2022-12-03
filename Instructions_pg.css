@@ -1,4 +1,6 @@
-/* default stuff for whole page */
+/* specific requirements for instructions page css layout */
+
+
 *{
     margin: 0;
     padding: 0;
@@ -15,7 +17,6 @@
 }
 body {
     background-color: yellow;
-    background-image: url('images/Beach_Theme.jpg');
     align-items: center;
     justify-content: space-between;
 }
