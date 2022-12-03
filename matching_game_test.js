@@ -16,7 +16,7 @@ describe('Testing function counter() of Task 6', function () {
 	});
 
 
-	it("Test2: Check if the theme(3) works", () =>{
+	it("Test3: Check if the theme(3) works", () =>{
 
 		Theme(3)
         assert.equal(document.body.style.backgroundColor, "yellow");

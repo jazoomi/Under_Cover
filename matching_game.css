@@ -24,6 +24,8 @@ body {
 	background-image: url('images/Title_BG.jpg');
 	font-family: cursive;
 	color: rgb(18, 89, 156);
+    height:  75px;
+    margin: 10px;
 }
 
 #GameDescription span {
@@ -100,6 +102,7 @@ body {
 
 #i_pg {
 	border-style: dotted; border-color: black; margin: 3px;
+    padding: 20px;
 }
 
 #instructionsTitle {
@@ -109,6 +112,10 @@ body {
 
 #subTitle{
     padding: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    border-style: dashed;
 }
 
 /* Game page css */
@@ -132,11 +139,9 @@ body {
     font-size: 25px;
     margin: 50px;
     width: 500px;
-   // height: 500px;
     border-style: solid;
     padding: 10px;
     grid-column: 3 / 4;
-  //  background-image: url('images/Winner.jpg');
 }
 
 .shapes{
@@ -214,7 +219,8 @@ body {
     padding-right: 50px;
     margin: 50px;
     margin-top: 70px;
-    margin-left: 300px;
+    margin-left: 50px;
+    margin-right: 200px;
 
 }
 
