@@ -188,7 +188,8 @@ function Theme(n){
         document.body.style.backgroundColor = "blue";
     }
     else {
-        document.body.style.backgroundColor = "yellow";
+        document.body.style.backgroundColor = rgb(245, 237, 177);
+        // document.body.style.backgroundColor = "yellow";
     }
 
 }
