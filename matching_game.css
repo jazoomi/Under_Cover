@@ -97,6 +97,11 @@ body {
     text-align: center;
     color: white;
 }
+
+#i_pg {
+	border-style: dotted; border-color: cyan; margin: 3px;
+}
+
 #subTitle{
 
 
