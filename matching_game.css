@@ -96,11 +96,11 @@ body {
     border-style: solid;
     text-align: center;
     font-family: cursive;
-    color: white;
 }
 
 #i_pg {
 	border-style: dotted; border-color: cyan; margin: 3px;
+	color: white;
 }
 
 #subTitle{
