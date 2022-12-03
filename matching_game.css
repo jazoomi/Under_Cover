@@ -14,8 +14,7 @@
     position: relative;
 }
 body {
-    background-color: yellow;
-    background-image: url('images/Beach_Theme.jpg');
+    background-color: green;
     align-items: center;
     justify-content: space-between;
 }
@@ -46,10 +45,6 @@ body {
     font-size: x-large
 }
 
-/* instructions page css here */
-
-
-
 /* main home body content */
 #GameDescription{
     font-size: 20px;
@@ -77,6 +72,22 @@ body {
     width: 300px;
     height: 300px;
     float: right;
+}
+
+/* instructions page css here */
+#instructionsTitle{
+
+    font-size: 20px;
+    margin: 50px;
+    padding: 10px;
+    border-style: solid;
+    text-align: center;
+}
+#subTitle{
+
+
+    padding: 10px;
+    border-style: dotted;
 }
 
 /* Game page css */
