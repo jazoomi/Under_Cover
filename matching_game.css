@@ -21,6 +21,7 @@ body {
 
 #title {
 	border-style: solid; border-color: white; margin: 3px;
+	background-image: url('images/Title_BG.jpg');
 }
 
 #GameDescription span {
