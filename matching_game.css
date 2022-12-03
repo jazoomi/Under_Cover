@@ -132,11 +132,11 @@ body {
     font-size: 25px;
     margin: 50px;
     width: 500px;
-    height: 500px;
+   // height: 500px;
     border-style: solid;
     padding: 10px;
     grid-column: 3 / 4;
-    background-image: url('images/Winner.jpg');
+  //  background-image: url('images/Winner.jpg');
 }
 
 .shapes{
