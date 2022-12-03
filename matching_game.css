@@ -103,6 +103,11 @@ body {
 	color: white;
 }
 
+#instructionsTitle {
+    padding: 15px;
+    margin-top: 10px;
+}
+
 #subTitle{
     padding: 10px;
 }
