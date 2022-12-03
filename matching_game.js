@@ -3,9 +3,15 @@ var url = "http://localhost:3000/post";
 var attempt = 0;
 //button press
 function Game(){
-
+    document.getElementById("scores").innerHTML = "";
     shapeCheck = 0;
     playerName = document.getElementById("fname").value;
+    //post req for the leaderboard
+    $.post(url+'?data='+JSON.stringify({
+        'action':'leaderboard',
+        }),
+        response);
+
     if (playerName == ""){
     alert (" please enter a name");
     }
@@ -13,6 +19,7 @@ function Game(){
     document.getElementById("fname").disabled = true;
     document.getElementById("start-game").disabled = true;
     
+
     $.post(url+'?data='+JSON.stringify({
         'name': playerName, //client's identity on the server
         'action':'generateShape',
@@ -172,12 +179,9 @@ function Check(shapes){
         shapeCheck = -1;
         document.getElementById("start-game").disabled = false; //turn the button back on
         document.getElementById("fname").disabled = false; //turn the textbox back on
+        document.getElementById("scores").innerHTML += playerName  + "  " + shapes.length + "<br>";
 
-        //post request to get the name
-        $.post(url+'?data='+JSON.stringify({
-            'action':'leaderboard'
-            }),
-            response);
+
     }
 }
 

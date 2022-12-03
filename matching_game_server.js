@@ -16,6 +16,7 @@ app.post('/post', (req, res) => {
         shapes = [];
         shapeCheck = 0;
         names[names.length] = z['name']
+        
     }
 
 

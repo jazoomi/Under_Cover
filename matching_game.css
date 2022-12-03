@@ -103,8 +103,8 @@ body {
     border-style: solid;
     width: 500px;
     text-align: center;
-    
     grid-column: 2 / 3;
+    height: 100px;
 }
 
 .leaderboard{
@@ -212,6 +212,7 @@ body {
     padding: 20px;
     margin: 20px;
     width: 1400px;
+    margin-right: 50000px;
 }
 hr{
 
