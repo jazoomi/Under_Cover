@@ -4,7 +4,7 @@ var express = require('express');
 const { json } = require('express/lib/response');
 var shapeCheck = 0;
 var app = express();
-var name; 
+var names = []; 
 
 app.post('/post', (req, res) => {
     res.header("Access-Control-Allow-Origin", "*");
@@ -15,7 +15,7 @@ app.post('/post', (req, res) => {
     if (z['button'] == 'reset'){
         shapes = [];
         shapeCheck = 0;
-        name = z['name']
+        names[names.length] = z['name']
     }
 
 
@@ -47,7 +47,7 @@ app.post('/post', (req, res) => {
 
         var jsontext = JSON.stringify({
             'action' : 'lose',
-            'name': name,
+            'names': names,
             'shapes': shapes
         });
 

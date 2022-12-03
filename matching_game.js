@@ -1,15 +1,15 @@
-var shapes = []; //this is the shape order, 1 isrectangle, 2 is circle, 3 square, 4 triangle
 var shapeCheck = 0; // this will keep track what shape number to check when a shape is pressed in attempt to match
-//var names = []; //this is an array that stores the names
 var url = "http://localhost:3000/post";
 var attempt = 0;
 //button press
 function Game(){
 
-    shapes = [];
     shapeCheck = 0;
-    // names [players] =document.getElementById("fname").value; 
     playerName = document.getElementById("fname").value;
+    if (playerName == ""){
+    alert (" please enter a name");
+    }
+    else{
     document.getElementById("fname").disabled = true;
     document.getElementById("start-game").disabled = true;
     
@@ -26,6 +26,7 @@ function Game(){
         document.getElementById("triangle").style.pointerEvents = "all";
         document.getElementById("circle").style.pointerEvents = "all";
     }, 1500);
+    }
 }
 
 //functions for shape buttons
@@ -130,8 +131,9 @@ function response(data, status){
     }
 
     else if (response['action'] == 'lose' ){
-        document.getElementById("scores").innerHTML += response['name']  + response.shapes.length;
-
+        for (var i = 0; i < response.names.length; i++) {
+        document.getElementById("scores").innerHTML += response.names[i]  + "  " + response.shapes.length + "<br>";
+        }
     }
 }
 
