@@ -183,6 +183,16 @@ body {
 
 
 /* About us css page here */
+#aboutUsTitle{
+    border-width: 3px;
+    border-style: solid;
+    float: left;
+    padding: 20px;
+}
+
+#motivations{
+    float: left;
+}
 
 /* Footer */
 .footer{

@@ -25,7 +25,7 @@ function Game(){
         document.getElementById("square").style.pointerEvents = "all";
         document.getElementById("triangle").style.pointerEvents = "all";
         document.getElementById("circle").style.pointerEvents = "all";
-    }, 3000);
+    }, 1500);
 }
 
 //functions for shape buttons
@@ -37,6 +37,7 @@ function rectangle(n1){
     
 }
 function circle(n2){
+    
     document.getElementById("circle").style.backgroundColor ="yellow";
     setTimeout(function(){document.getElementById("circle").style.backgroundColor = "#555"}, 500);
     attempt = 2;
@@ -59,6 +60,13 @@ function triangle(n4){
 
 //interates through all the shapes up until now
 function iteration(shapes){
+    if (shapes.length == 1){
+
+    }
+    else {
+
+    document.getElementById("lose").innerHTML = "Congratuatlions !";
+    }
     var i = 0;
     myInterval = setInterval(function(){ 
         if ( shapes[i] == 1){
@@ -97,6 +105,8 @@ function generateShape() {
 }
 //checks if selected chape is correct
 function checkShape(n){    
+    document.getElementById("lose").innerHTML += "<br>" + (shapeCheck+1);
+
     $.post(url+'?data='+JSON.stringify({
         'action':'evaluate',
         'attempt': n
@@ -147,7 +157,7 @@ function Check(shapes){
             document.getElementById("square").style.pointerEvents = "all";
             document.getElementById("triangle").style.pointerEvents = "all";
             document.getElementById("circle").style.pointerEvents = "all";
-            }, (1+ shapes.length) *1000);
+            }, ((1+ shapes.length) *1000)+ 500);
         }
     }
     else{
