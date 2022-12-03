@@ -103,14 +103,7 @@ function iteration(shapes){
 
     
 }
-//add a new shape only to the end of the array
-function generateShape() {
-    
-    var shape = Math.floor(Math.random()*4 + 1);
 
-    shapes.push(shape);
-
-}
 //checks if selected chape is correct
 function checkShape(n){    
     document.getElementById("lose").innerHTML += "<br>" + (shapeCheck+1);

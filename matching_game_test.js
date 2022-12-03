@@ -1,26 +1,27 @@
-//test cases 1012ab22f
+
 assert = chai.assert;
 
 describe('Testing function counter() of Task 6', function () {
 
-    it('Test 1: counter() returns 1 after 19 calls', function () {
-        assert.equal(theme(), 1);
+    it('Test1: check if the Theme(1) works', function () {
+		Theme(1)
+        assert.equal(document.body.style.backgroundColor, "green");
     });
 
 
-	it("Test2 : counter() returns 0 after 20 calls", () =>{
+	   it("Test2: Check if the Theme(2) works", () =>{
 
-		assert.equal(counter(), 0);
+		Theme(2)
+        assert.equal(document.body.style.backgroundColor, "blue");
 	});
 
 
+	it("Test2: Check if the theme(3) works", () =>{
 
-
-	   it("Test3 : counter() returns BOOM! after 21 calls", () =>{
-
-		assert.equal(counter(), "BOOM!");
+		Theme(3)
+        assert.equal(document.body.style.backgroundColor, "yellow");
+		Theme(1);
 	});
 
 
 });
-
