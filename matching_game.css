@@ -21,16 +21,14 @@ body {
 
 #title {
 	border-style: solid; border-color: white; margin: 3px;
+    margin-top: 8px;
+    margin-left: 5px;
 	background-image: url('images/Title_BG.jpg');
 	font-family: cursive;
 	color: rgb(18, 89, 156);
+    height: 80px;
 }
 
-#GameDescription span {
-    font-style: italic;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(186, 231, 224);
-}
 
 .nav-links{
     border-style: solid;
@@ -65,7 +63,11 @@ body {
     padding: 10px;
     border-style: solid;
     text-align: center;
-    
+}
+#GameDescription span {
+    font-style: italic;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(186, 231, 224);
 }
 
 #play{
@@ -91,8 +93,8 @@ body {
 #instructionsTitle{
 
     font-size: 20px;
-    /* margin: 50px;
-    padding: 10px; */ 
+     margin: 50px;
+    padding: 10px; 
     border-style: solid;
     text-align: center;
     font-family: cursive;
@@ -101,15 +103,15 @@ body {
 #i_pg {
 	border-style: dotted; border-color: cyan; margin: 3px;
 	color: white;
+    padding: 10px;
 }
 
-#instructionsTitle {
-    padding: 15px;
-    margin-top: 10px;
-}
+
 
 #subTitle{
     padding: 10px;
+    border-style: dashed;
+    margin-bottom: 20px;
 }
 
 /* Game page css */

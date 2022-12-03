@@ -189,7 +189,6 @@ function Theme(n){
     }
     else {
         document.body.style.backgroundColor = "lightyellow";
-        // document.body.style.backgroundColor = "yellow";
     }
 
 }
