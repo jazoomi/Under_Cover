@@ -19,5 +19,9 @@
   "devDependencies": {
     "chai": "^4.3.7",
     "mocha": "^10.1.0"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.90.0",
+    "express": "^5.2.1"
   }
 }
