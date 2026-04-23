@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 # Matching Game
+=======
+>>>>>>> 8af0711960b298f7139d64303ad16eed0fedb0fb
 
 A browser-based memory sequence game where you go head-to-head against an AI that generates increasingly difficult shape patterns for you to match.
 
+<<<<<<< HEAD
 ## How It Works
 
 The AI picks a random sequence of shapes and flashes them at you one by one. Your job is to click the shapes back in the exact same order. Get it right, and the AI adds one more shape to the sequence — making each round harder than the last. Get it wrong, and the game ends.
@@ -41,3 +45,8 @@ The server runs on `http://localhost:3000`.
 ---
 
 *Built by Sadiq Azmi — EECS 1012, Fall 2022*
+=======
+<video src="https://github.com/user-attachments/assets/04b1fffd-5354-41e6-9baf-d237721edff1"> 
+
+
+>>>>>>> 8af0711960b298f7139d64303ad16eed0fedb0fb
