@@ -1,81 +1,43 @@
-# Under_Cover
-Term Project: Phase 0
+# Matching Game
 
+A browser-based memory sequence game where you go head-to-head against an AI that generates increasingly difficult shape patterns for you to match.
 
+## How It Works
 
-<h4> Team members: </h4>
- 
-Sadiq Azmi
+The AI picks a random sequence of shapes and flashes them at you one by one. Your job is to click the shapes back in the exact same order. Get it right, and the AI adds one more shape to the sequence — making each round harder than the last. Get it wrong, and the game ends.
 
-     jazoomi@my.yorku.ca
+It's a pure test of memory and focus against an opponent that never makes mistakes.
 
-     Section B
+## Playing the Game
 
-     Lab 01
-Erin Goulais
+1. Open `Home.html` in your browser
+2. Head to the **Game** page
+3. Enter your name and hit **Start**
+4. Watch the AI flash the sequence — memorize the order
+5. Click the shapes in the same order to match it
+6. Keep going as long as you can — the sequence grows every round
 
-     egoulais@my.yorku.ca (or redturtlewoman@icloud.com)
+## Shapes
 
-     Section B
+The AI sequences use four shapes: a **rectangle**, **circle**, **square**, and **triangle**. Each is color-coded so they're easy to tell apart at a glance.
 
-     Lab 01 
+## Running the Server
 
-Harsimr Dhillon 
+The leaderboard and AI logic require the Node.js server:
 
-     hdillon2@my.yorku.ca
-     
-     Section B
+```bash
+npm install
+node matching_game_server.js
+```
 
-     Lab 02
+The server runs on `http://localhost:3000`.
 
-Rohit Dhall
+## Tech Stack
 
-    Rohit059@my.yorku.ca
+- Vanilla HTML, CSS, JavaScript
+- jQuery (AJAX calls to the game server)
+- Node.js + Express (server-side AI and leaderboard)
 
-    Section B
+---
 
-    Lab 04
- 
-
-<h4> Name of Team: </h4>
-
-Under_cover 
-
-
-<h4> Project title: </h4>
-
-Matching game 
-
-
-<h5> Short paragraph describing project description: </h5>
-
-Matching game is a fun interactive game which uses the coding languages: HTML, CSS, and Javascript, Node.js and Jquery. This game is a user-friendly interface where the user starts at the homepage to select “game” to play the game. The user’s screen has 4 shapes: square, circle, triangle, and rectangle. The user selects the “start” button where they are then prompted by a highlighted image of one of the shapes. The user must then select this highlighted image where they then get a counter as a point system for them. That is stored on the leaderboard.  The server runs the same shape and adds one more random one in the next round. The game ends when the user makes a mistake and the screen will prompt “Game over! You Lose!”. Furthermore, there are buttons on the side to change the theme of the page. The game has a difficulty setting: an easy mode and a hard mode. 
-
-<h4> Software Requirments </h4>
-
-1. First, the user will be asked to enter their name which is located on the game page 
-
-2. Second, the user will submit by clicking the "submit" button (which is oval, blue, located next to the name)
-
-3. The game is set at default easy mode (or can change it to hard mode which needs to be done before starting) 
-
-4. All buttons in the webpages are rectangle and grey colour.
-
-5. User should be able to click a "start" button for the game (the start button is circular and red)
-
-6. user can change the theme of the page with the three buttons on the side (the three buttons are grey circle) the themes consits of 1) forest, 2) beach 3) desert
-
-7. when the game starts the images will light up for a sequence where the user then has to match it
-
-5. User should be able to click on the shapes, circle, pentagon, triangle, rectangle.
-
-6. If user were to incorrectlly click on a shape, the game would end once they click on the incorrect shape\
-
-7. when the user clicks on a shape at any time the shape will change color to red
-
-8. user can enter their name to add their score will be displayed on the leaderbored 
-
-10. shows a small prompt of congratulation when they win a round.
-
-11. shows a deafeat when the user loses " You lose!"  
-
+*Built by Sadiq Azmi — EECS 1012, Fall 2022*

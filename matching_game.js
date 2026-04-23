@@ -39,29 +39,29 @@ function Game(){
 //functions for shape buttons
 function rectangle(n1){
     document.getElementById("rectangle").style.backgroundColor ="yellow";
-    setTimeout(function(){document.getElementById("rectangle").style.backgroundColor = "#555"}, 500);
+    setTimeout(function(){document.getElementById("rectangle").style.backgroundColor = "#3b82f6"}, 500);
     attempt = 1;
    checkShape(attempt);
-    
+
 }
 function circle(n2){
-    
+
     document.getElementById("circle").style.backgroundColor ="yellow";
-    setTimeout(function(){document.getElementById("circle").style.backgroundColor = "#555"}, 500);
+    setTimeout(function(){document.getElementById("circle").style.backgroundColor = "#8b5cf6"}, 500);
     attempt = 2;
   checkShape(attempt);
 }
 
 function square(n3){
     document.getElementById("square").style.backgroundColor ="yellow";
-    setTimeout(function(){document.getElementById("square").style.backgroundColor = "#555"}, 500);
+    setTimeout(function(){document.getElementById("square").style.backgroundColor = "#f59e0b"}, 500);
     attempt = 3;
     checkShape(attempt);
 }
 
 function triangle(n4){
     document.getElementById("triangle").style.borderBottomColor ="yellow";
-    setTimeout(function(){document.getElementById("triangle").style.borderBottomColor = "#555"}, 500);
+    setTimeout(function(){document.getElementById("triangle").style.borderBottomColor = "#22c55e"}, 500);
     attempt =4
     checkShape(attempt);
 }
@@ -79,19 +79,19 @@ function iteration(shapes){
     myInterval = setInterval(function(){ 
         if ( shapes[i] == 1){
             document.getElementById("rectangle").style.backgroundColor = "red"
-            setTimeout(function(){document.getElementById("rectangle").style.backgroundColor = "#555"}, 500);
+            setTimeout(function(){document.getElementById("rectangle").style.backgroundColor = "#3b82f6"}, 500);
         }
         else if (shapes[i] == 2){
           document.getElementById("circle").style.backgroundColor = "red"
-            setTimeout(function(){document.getElementById("circle").style.backgroundColor = "#555"}, 500);
+            setTimeout(function(){document.getElementById("circle").style.backgroundColor = "#8b5cf6"}, 500);
         }
         else if (shapes[i] == 3){
             document.getElementById("square").style.backgroundColor = "red"
-            setTimeout(function(){document.getElementById("square").style.backgroundColor = "#555"}, 500);
+            setTimeout(function(){document.getElementById("square").style.backgroundColor = "#f59e0b"}, 500);
         }
         else {
             document.getElementById("triangle").style.borderBottomColor = "red"
-            setTimeout(function(){document.getElementById("triangle").style.borderBottomColor = "#555"}, 500);
+            setTimeout(function(){document.getElementById("triangle").style.borderBottomColor = "#22c55e"}, 500);
         }
         i++;
         document.getElementById("lose").innerHTML = i + " Round: " + shapes.length;

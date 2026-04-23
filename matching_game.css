@@ -1,278 +1,475 @@
-/* default stuff for whole page */
-*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --bg: #0f172a;
+    --surface: #1e293b;
+    --surface-2: #253349;
+    --border: #334155;
+    --primary: #8b5cf6;
+    --primary-hover: #7c3aed;
+    --accent: #fbbf24;
+    --text: #f1f5f9;
+    --text-muted: #94a3b8;
+}
+
+* {
     margin: 0;
     padding: 0;
-    font-family: "poppings", sans-serif;
     box-sizing: border-box;
 }
 
-/* header*/
-#header{
-    height: 100vh;
-    width: 100%;
-    padding: 0 8%;
-    position: relative;
-}
 body {
-    background-color: green;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ── Nav ── */
+.site-header {
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.header-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    height: 64px;
+    display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 2rem;
+    padding: 0 1.5rem;
 }
 
-#title {
-	border-style: solid; border-color: white; margin: 3px;
-	background-image: url('images/Title_BG.jpg');
-	font-family: cursive;
-	color: rgb(18, 89, 156);
-    height:  75px;
-    margin: 10px;
+.logo {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--primary);
+    white-space: nowrap;
 }
 
-#GameDescription span {
-    font-style: italic;
-    font-family: Arial, Helvetica, sans-serif;
-    color: rgb(186, 231, 224);
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 0.2rem;
+    flex: 1;
 }
 
-.nav-links{
-    border-style: solid;
-    padding: 28px 0;
+.nav-links a {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 500;
+    padding: 0.4rem 0.85rem;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+    display: block;
 }
-#title{
-    float: left;
+
+.nav-links a:hover {
+    color: var(--text);
+    background: var(--surface-2);
+}
+
+.theme-btns {
+    display: flex;
+    gap: 0.4rem;
+    flex-shrink: 0;
+}
+
+.theme-btn {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text-muted);
+    padding: 0.3rem 0.65rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 0.78rem;
+    font-weight: 500;
+    transition: all 0.15s;
+}
+
+.theme-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+/* ── Main wrapper ── */
+main {
+    flex: 1;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    padding: 2.5rem 1.5rem 4rem;
+}
+
+/* ── Footer ── */
+.site-footer {
+    background: var(--surface);
+    border-top: 1px solid var(--border);
     text-align: center;
-
-    border-right-style: solid;
-    padding: 23px;
+    padding: 1rem 1.5rem;
+    color: var(--text-muted);
+    font-size: 0.82rem;
 }
 
-.nav-links li{
+/* ── Shared ── */
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+}
 
+.page-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.page-sub {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* ── Home ── */
+.hero {
+    text-align: center;
+    padding: 5rem 1rem 3rem;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.15;
+    margin-bottom: 1.25rem;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.75;
+}
+
+.hero-img {
+    display: block;
+    max-width: 360px;
+    width: 100%;
+    margin: 2.5rem auto 0;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    object-fit: cover;
+}
+
+.btn-play {
     display: inline-block;
-    margin: 0 15px;
-    
-    border-style: solid;
-    border-width: 3px;
-    border: black;
-}
-.nav-links button{
-    margin-left: 70px;
-    font-size: x-large
-}
-
-/* main home body content */
-#GameDescription{
-    font-size: 20px;
-    margin: 50px;
-    padding: 10px;
-    border-style: solid;
-    text-align: center;
-    
+    background: var(--primary);
+    color: #fff;
+    padding: 0.85rem 2.8rem;
+    border-radius: 8px;
+    font-size: 1.05rem;
+    font-weight: 600;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s, transform 0.1s;
 }
 
-#play{
-    width: 200px;
-    height: 200px;
-    margin: 10px;
-    
-}
-#PlayButton{
-    width: 100px;
-    height: 100px;
-    margin: 50px;
-    position: absolute;
-}
-#HomePageImg{
-    margin: 50px;
-    width: 300px;
-    height: 300px;
-    float: right;
+.btn-play:hover {
+    background: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
-/* instructions page css here */
-#instructionsTitle{
-
-    font-size: 20px;
-    /* margin: 50px;
-    padding: 10px; */ 
-    border-style: solid;
-    text-align: center;
-    font-family: cursive;
+.btn-play:active {
+    transform: translateY(0);
 }
 
-#i_pg {
-	border-style: dotted; border-color: black; margin: 3px;
-    padding: 20px;
+/* ── Instructions ── */
+.instructions-card h3 {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent);
+    margin-bottom: 1.25rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
-#instructionsTitle {
-    padding: 15px;
-    margin-top: 10px;
+.steps {
+    list-style: none;
+    counter-reset: step;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
 
-#subTitle{
-    padding: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-    border-style: dashed;
+.steps li {
+    counter-increment: step;
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+    color: var(--text-muted);
+    line-height: 1.65;
+    font-size: 0.95rem;
 }
 
-/* Game page css */
-.container{
+.steps li::before {
+    content: counter(step);
+    background: var(--primary);
+    color: #fff;
+    min-width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.72rem;
+    font-weight: 700;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+
+.steps li strong {
+    color: var(--text);
+}
+
+/* ── Game ── */
+.game-layout {
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 260px;
+    gap: 2rem;
+    align-items: start;
 }
 
-#MatchingGame{
-    font-size: 50px;
-    margin: 50px;
-    padding: 10px;
-    border-style: solid;
-    width: 500px;
-    text-align: center;
-    grid-column: 2 / 3;
-    height: 100px;
+.game-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
-.leaderboard{
-    font-size: 25px;
-    margin: 50px;
-    width: 500px;
-    border-style: solid;
-    padding: 10px;
-    grid-column: 3 / 4;
+.game-panel h2 {
+    font-size: 1.75rem;
+    font-weight: 700;
 }
 
-.shapes{
-    grid-column: 2 / 3 ;
+.shapes-grid {
     display: grid;
-    grid-template-columns: auto auto ;
-    position: relative;
-    gap: 50px;
-
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2.5rem;
+    justify-items: center;
+    align-items: center;
+    min-height: 300px;
 }
 
-    #square {
+#square {
     height: 100px;
     width: 100px;
-    background-color: #555;
+    background-color: #f59e0b;
+    border-radius: 8px;
     pointer-events: none;
+    cursor: pointer;
+}
 
-    
-  }
-  #circle {
+#circle {
     height: 100px;
     width: 100px;
-    background-color: #555;
+    background-color: #8b5cf6;
     border-radius: 50%;
     pointer-events: none;
+    cursor: pointer;
+}
 
-
-  }
-
-  #rectangle {
-    height: 100px;
-    width: 200px;
-    background-color: #555;
+#rectangle {
+    height: 70px;
+    width: 150px;
+    background-color: #3b82f6;
+    border-radius: 6px;
     pointer-events: none;
+    cursor: pointer;
+}
 
-
-  }
-  #triangle {
-	width: 0;
-	height: 0;
-	border-left: 50px solid transparent;
-	border-right: 50px solid transparent;
-	border-bottom: 100px solid #555;
+#triangle {
+    width: 0;
+    height: 0;
+    border-left: 55px solid transparent;
+    border-right: 55px solid transparent;
+    border-bottom: 100px solid #22c55e;
     pointer-events: none;
-
+    cursor: pointer;
 }
 
-#info {
-    grid-column: 2 / 3;
-    position: relative;
-}
-#start-game{
-
-
-    margin: 50px;
-    width: 100px;
-    height: 50px;
-
+.game-controls {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
 }
 
-#lose{
-    margin: 50px;
-    font-size: 20px;
-    grid-column: 3 / 4;
+#fname {
+    flex: 1;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.6rem 1rem;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: border-color 0.15s;
 }
 
-
-
-/* About us css page here */
-#aboutUsTitle{
-    border-width: 3px;
-    border-style: solid;
-    float: left;
-    padding: 20px;
-    padding-right: 50px;
-    margin: 50px;
-    margin-top: 70px;
-    margin-left: 50px;
-    margin-right: 200px;
-
+#fname:focus {
+    outline: none;
+    border-color: var(--primary);
 }
 
-#img{
-    height: 150px;
-    width: 300px;
-    float: right;
-    margin: 20px;
-    margin-right: 300px;
-    margin-top: 30px;
-    position: fixed;
+#fname::placeholder {
+    color: var(--text-muted);
 }
 
-#motivations{
-    border-width: 3px;
-    border-style: solid;
-    float: left;
-    padding: 20px;
-    margin: 20px;
-    width: 1400px;
-    margin-right: 50000px;
+#start-game {
+    background: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.15s;
+    white-space: nowrap;
 }
 
-#motivations span {
-    font-style: italic;
-    font-family: cursive;
-    color: rgb(178, 237, 241);
+#start-game:hover {
+    background: var(--primary-hover);
 }
-	
-hr{
 
-    overflow: visible;
-    position: relative;
-    top: 350px;
-    border-color: black;
+#start-game:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
 }
-.devs{
-    float: left;
-    margin: 50px;
-    margin-top: 100px;
-    border-style: solid;
-    padding: 20px;
-    color: white;
+
+#lose {
+    color: var(--accent);
+    font-size: 1rem;
+    font-weight: 600;
+    min-height: 1.5rem;
 }
-/* Footer */
-.footer{
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: lightgreen;
-    color: black;
-    text-align: center;
-    padding: 20px;
+
+.leaderboard {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+.leaderboard h3 {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--accent);
+    margin-bottom: 1rem;
+}
+
+#scores {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+    line-height: 1.9;
+}
+
+/* ── About Us ── */
+.about-intro {
+    display: flex;
+    gap: 2.5rem;
+    align-items: flex-start;
+    margin-bottom: 3rem;
+}
+
+.about-logo {
+    width: 180px;
+    height: auto;
+    border-radius: 10px;
+    border: 1px solid var(--border);
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.about-text h2 span {
+    color: var(--primary);
+}
+
+.about-text p {
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 0.97rem;
+}
+
+.developer-card {
+    display: flex;
+    align-items: center;
+    gap: 1.75rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 2rem 2.5rem;
+    max-width: 480px;
+}
+
+.dev-avatar {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    letter-spacing: 1px;
+}
+
+.dev-info h2 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.35rem;
+}
+
+.dev-email {
+    color: var(--primary);
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.15s;
+}
+
+.dev-email:hover {
+    color: var(--accent);
 }

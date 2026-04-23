@@ -1,55 +1,61 @@
 <!DOCTYPE html>
-<html>
-<header>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title> matching game </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game – Matching Game</title>
     <link rel="stylesheet" href="matching_game.css">
-    <script src="matching_game.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <h1 id="title"> Matching game</h1>
-    <div class="header";>
-        <nav>
-            <ul class="nav-links">
-                <li> <h2><a href="Home.html"> Home </a></h2> </li>
-                <li> <h2><a href="Instructions.html"> Instructions </a></h2> </li>
-                <li> <h2><a href="Game.html"> Game</a></h2> </li>
-                <li> <h2><a href="AboutUs.html"> About Us </a></h2> </li>
-                <button onclick="Theme(1)"> Theme 1 </button>
-                <button onclick="Theme(2)"> Theme 2 </button>
-                <button onclick="Theme(3)"> Theme 3 </button>
-            </ul>
-        </nav>
-    </div>
-</header>
-
+    <script src="matching_game.js" defer></script>
+</head>
 <body>
-    <div class="container"> 
-        <h2 id="MatchingGame"> Matching game </h2>
-        
-        <div class="leaderboard">
-            <p> <strong> Match History </strong> <p id="scores">  </p>   </p>
-        </div>
 
-        <div class="shapes">
-            <div id="rectangle" onclick="rectangle(1)"></div>
-            <div id="circle" onclick="circle(2)"></div>
-            <div id="square" onclick="square(3)"></div>
-            <div id="triangle" onclick="triangle(4)"></div>
-        </div>
-        <div id="info">
-        <input type="text" id="fname" name="fname" placeholder="Enter name here">
-        <button id="start-game" onclick="Game()"> Start </button>
-        </div>
-        <h3 id="lose"> </h3>
-     
-
-    </div>
-        <footer>
-            <div class="footer">
-                <p> &copy; Under_Cover EECS 1012 (Fall 2022) </p>
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="Home.html" class="logo">Matching Game</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Instructions.html">Instructions</a></li>
+                    <li><a href="Game.html">Game</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="theme-btns">
+                <button onclick="Theme(1)" class="theme-btn">Theme 1</button>
+                <button onclick="Theme(2)" class="theme-btn">Theme 2</button>
+                <button onclick="Theme(3)" class="theme-btn">Theme 3</button>
             </div>
-    </footer>
-</body>
-</body>
+        </div>
+    </header>
 
+    <main>
+        <div class="game-layout">
+            <div class="game-panel">
+                <h2>Matching Game</h2>
+                <div class="shapes-grid">
+                    <div id="rectangle" onclick="rectangle(1)"></div>
+                    <div id="circle" onclick="circle(2)"></div>
+                    <div id="square" onclick="square(3)"></div>
+                    <div id="triangle" onclick="triangle(4)"></div>
+                </div>
+                <div class="game-controls">
+                    <input type="text" id="fname" name="fname" placeholder="Enter your name">
+                    <button id="start-game" onclick="Game()">Start</button>
+                </div>
+                <p id="lose"></p>
+            </div>
+
+            <div class="leaderboard">
+                <h3>Match History</h3>
+                <p id="scores"></p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Under_Cover EECS 1012 (Fall 2022)</p>
+    </footer>
+
+</body>
 </html>

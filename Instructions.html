@@ -1,53 +1,56 @@
 <!DOCTYPE html>
-<html>
-<header>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title> matching game </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructions – Matching Game</title>
     <link rel="stylesheet" href="matching_game.css">
-    <script src="matching_game.js"></script>
-
-
-    <h1 id="title"> Matching game</h1>
-    <div class="header";>
-        <nav>
-            <ul class="nav-links">
-                <li> <h2><a href="Home.html"> Home </a></h2> </li>
-                <li> <h2><a href="Instructions.html"> Instructions </a></h2> </li>
-                <li> <h2><a href="Game.html"> Game</a></h2> </li>
-                <li> <h2><a href="AboutUs.html"> About Us </a></h2> </li>
-                <button onclick="Theme(1)"> Theme 1 </button>
-                <button onclick="Theme(2)"> Theme 2 </button>
-                <button onclick="Theme(3)"> Theme 3 </button>
-            </ul>
-        </nav>
-    </div>
-</header>
-
+    <script src="matching_game.js" defer></script>
+</head>
 <body>
-    <h2 id="instructionsTitle"> Instructions </h1>
-    <h3 id="subTitle"> How to play: </h2>
-    <p id="i_pg"> This is the instructions page for Matching game! <br> 
-    
-        to first access to the game, naviagte to "Game" with the navigation at the top. <br>
-        once you are navigated to the page, this where is you can start the game. <br>
-        the game consists of 4 shapes where you would need to remember the sequence that we randomly generate for you. <br>
-        you can get enter your name to be displayed once the game is finished <br>
-        press "start" to start the game. <br> 
-        the game will start by flashing some shapes you must remember. <br>
-        once the shapes stop flashing, thats when you make an attempt in following the pattern given to you. <br>
-        this game has been coded with a highly intelligent AI so that it randomly chooses shapes in a sequence. <br>  
-        The game ends only when you get an incorrect shape. <br>
-        furthermore, you can press start to play again. <br>
-        as additonal features, you can press the buttons at the top to change the theme of the page (a selection of blue, green, and yellow). <br>
-        In the about us, you can find information behind us, the devlopers who made this game and the purpose <br>
-    </p>
-    
-    
-    <footer>
-        <div class="footer">
-            <p> &copy; Under_Cover EECS 1012 (Fall 2022) </p>
-        </div>
-    </footer>
-</body>
 
+    <header class="site-header">
+        <div class="header-inner">
+            <a href="Home.html" class="logo">Matching Game</a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Instructions.html">Instructions</a></li>
+                    <li><a href="Game.html">Game</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="theme-btns">
+                <button onclick="Theme(1)" class="theme-btn">Theme 1</button>
+                <button onclick="Theme(2)" class="theme-btn">Theme 2</button>
+                <button onclick="Theme(3)" class="theme-btn">Theme 3</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <h1 class="page-heading">Instructions</h1>
+        <p class="page-sub">Learn how to play in minutes.</p>
+
+        <div class="card instructions-card">
+            <h3>How to play</h3>
+            <ol class="steps">
+                <li>Navigate to the <strong>Game</strong> page using the menu above.</li>
+                <li>Enter your name in the text field on the game page.</li>
+                <li>Press <strong>Start</strong> — the AI will flash a sequence of shapes.</li>
+                <li>Watch carefully and memorize the order in which the shapes light up.</li>
+                <li>Once the flashing stops, click the shapes in the same order to match the sequence.</li>
+                <li>Each correct round adds one more shape to the sequence — it keeps getting harder!</li>
+                <li>The game ends when you click the wrong shape. Try to beat your score!</li>
+                <li>Use the <strong>Theme</strong> buttons in the nav to change the page color scheme.</li>
+                <li>Visit <strong>About Us</strong> to learn more about the team behind this game.</li>
+            </ol>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Under_Cover EECS 1012 (Fall 2022)</p>
+    </footer>
+
+</body>
 </html>

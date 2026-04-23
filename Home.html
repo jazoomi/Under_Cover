@@ -1,41 +1,45 @@
 <!DOCTYPE html>
-<html>
-<header>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <title> matching game </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matching Game</title>
     <link rel="stylesheet" href="matching_game.css">
-    <script src="matching_game.js"></script>
-
-    <h1 id="title"> Matching game</h1>
-    <div class="header";>
-        <nav>
-            <ul class="nav-links">
-                <li> <h2><a href="Home.html"> Home </a></h2> </li>
-                <li> <h2><a href="Instructions.html"> Instructions </a></h2> </li>
-                <li> <h2><a href="Game.html"> Game</a></h2> </li>
-                <li> <h2><a href="AboutUs.html"> About Us </a></h2> </li>
-                <button onclick="Theme(1)"> Theme 1 </button>
-                <button onclick="Theme(2)"> Theme 2 </button>
-                <button onclick="Theme(3)"> Theme 3 </button>
-            </ul>
-        </nav>
-    </div>
-</header>
-
+    <script src="matching_game.js" defer></script>
+</head>
 <body>
-    <p id="GameDescription"> Welcome to <span> Matching game! </span> <br> This is an exciting game where you must match shapes correctly with a highley intelligent AI. 
-    <br> Once you are ready to start, press the play button. Be sure to check out the Instructions and About Us Page as well! </p>
-    
-    <img src="Images/PlayButton.jpg" id="play">
-    <button id="PlayButton"> <a href="Game.html"> Play </a> </button>
-    <img src="Images/HomePageImage.jpg" id="HomePageImg">
-    
 
-    <footer>
-        <div class="footer">
-            <p> &copy; Under_Cover EECS 1012 (Fall 2022) </p>
+    <header class="site-header">
+        <div class="header-inner">
+            <span class="logo">Matching Game</span>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="Home.html">Home</a></li>
+                    <li><a href="Instructions.html">Instructions</a></li>
+                    <li><a href="Game.html">Game</a></li>
+                    <li><a href="AboutUs.html">About Us</a></li>
+                </ul>
+            </nav>
+            <div class="theme-btns">
+                <button onclick="Theme(1)" class="theme-btn">Theme 1</button>
+                <button onclick="Theme(2)" class="theme-btn">Theme 2</button>
+                <button onclick="Theme(3)" class="theme-btn">Theme 3</button>
+            </div>
         </div>
-    </footer>
-</body>
+    </header>
 
+    <main>
+        <div class="hero">
+            <h1>Welcome to <span>Matching Game!</span></h1>
+            <p>An exciting memory challenge where you must match shapes in sequence. How long can you keep up?</p>
+            <a href="Game.html" class="btn-play" id="PlayButton">Play Now</a>
+            <img src="Images/HomePageImage.jpg" alt="Matching Game" class="hero-img">
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; Under_Cover EECS 1012 (Fall 2022)</p>
+    </footer>
+
+</body>
 </html>
